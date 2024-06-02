@@ -42,7 +42,7 @@ public struct HexGrid<Data, ID, Content>: View where Data: RandomAccessCollectio
         HexLayout {
             ForEach(data, id: id) { element in
                 content(element)
-                    .clipShape(Hexagon())
+                    // .clipShape(Hexagon())
                     .padding(.all, spacing)
                     .layoutValue(key: OffsetCoordinateLayoutValueKey.self,
                                  value: element.offsetCoordinate)
